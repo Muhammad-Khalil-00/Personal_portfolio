@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Muhammad Khalil | Flutter Developer & Mobile Application Engineer</title>
+  <meta name="description" content="Portfolio of Muhammad Khalil - Flutter Developer, Mobile Application Engineer, and CTO at Qodex Software. Specializing in high-performance Android & iOS mobile applications." />
+  <meta name="keywords" content="Muhammad Khalil, Flutter Developer, Mobile App Engineer, Android, iOS, Dart, Firebase, Supabase, Provider, Fiverr Freelancer" />
+  <meta name="author" content="Muhammad Khalil" />
+
+  <!-- Open Graph Meta -->
+  <meta property="og:title" content="Muhammad Khalil | Flutter Developer & Mobile Application Engineer" />
+  <meta property="og:description" content="Explore production mobile applications, architecture, and freelance mobile engineering services by Muhammad Khalil." />
+  <meta property="og:image" content="assets/images/khalil.jpg" />
+  <meta property="og:type" content="website" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="styles/main.css" />
+  <link rel="stylesheet" href="styles/components.css" />
+  <link rel="stylesheet" href="styles/animations.css" />
+</head>
+<body>
+
+  <!-- Ambient Dynamic Particle Canvas -->
+  <canvas id="ambient-canvas"></canvas>
+  <div class="bg-grid-overlay"></div>
+
+  <!-- Custom Cursor Glow Follower -->
+  <div class="cursor-dot"></div>
+  <div class="cursor-follower"></div>
+
+  <!-- =========================================================================
+       NAVBAR
+       ========================================================================= -->
+  <nav class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#hero" class="brand-logo" id="nav-brand">
+        <div class="logo-badge">MK</div>
+        <div class="logo-text">Muhammad <span>Khalil</span></div>
+      </a>
+
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#reviews" class="nav-link">Reviews</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="#contact" class="btn btn-sm btn-primary" id="nav-contact-btn">
+          <span>Get in Touch</span>
+        </a>
+        <button class="mobile-toggle" id="mobile-menu-toggle" aria-label="Toggle navigation menu">
+          <svg viewBox="0 0 24 24" width="26" height="26" stroke="currentColor" stroke-width="2" fill="none">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- =========================================================================
+       HERO SECTION
+       ========================================================================= -->
+  <section class="hero" id="hero">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <div class="hero-status">
+          <div class="status-pill">
+            <span class="pulse-dot"></span>
+            <span>Available for Freelance & Contract Projects</span>
+          </div>
+        </div>
+
+        <p class="hero-greeting">Hi there, I'm</p>
+        <h1 class="hero-title">Muhammad Khalil</h1>
+
+        <div style="font-size: clamp(1.4rem, 2.5vw, 2rem); font-family: var(--font-heading); font-weight: 700; margin-bottom: 20px;">
+          I build <span class="typewriter-container" id="typewriter-text"></span><span class="typewriter-cursor">&nbsp;</span>
+        </div>
+
+        <p class="hero-description">
+          Results-driven Flutter Developer & Mobile Application Engineer with hands-on industry experience building and deploying high-quality cross-platform mobile apps for Android & iOS. Proficient in Dart, Clean Architecture, Provider, Firebase, and Supabase.
+        </p>
+
+        <div class="hero-cta-group">
+          <a href="#projects" class="btn btn-lg btn-primary" id="hero-cta-work">
+            <span>Explore Projects</span>
+            <svg viewBox="0 0 20 20" fill="currentColor" width="18" height="18">
+              <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+            </svg>
+          </a>
+          <a href="#contact" class="btn btn-lg btn-secondary" id="hero-cta-cv">
+            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+              <polyline points="14 2 14 8 20 8"></polyline>
+              <line x1="16" y1="13" x2="8" y2="13"></line>
+              <line x1="16" y1="17" x2="8" y2="17"></line>
+              <polyline points="10 9 9 9 8 9"></polyline>
+            </svg>
+            <span>Request Updated CV</span>
+          </a>
+          <a href="#contact" class="btn btn-lg btn-outline" id="hero-cta-contact">
+            <span>Get in Touch</span>
+          </a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="stat-item">
+            <h3>1+<span>Yr</span></h3>
+            <p>Industry Experience</p>
+          </div>
+          <div class="stat-item">
+            <h3>5+<span>Apps</span></h3>
+            <p>Production Apps</p>
+          </div>
+          <div class="stat-item">
+            <h3>100%<span>★</span></h3>
+            <p>Job Success Rate</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Visual with Real User Portrait -->
+      <div class="hero-visual">
+        <div class="hero-image-wrapper">
+          <img src="assets/images/khalil.jpg" alt="Muhammad Khalil - Flutter Developer" class="hero-image" id="hero-portrait" />
+          
+          <!-- Floating Badge 1: Flutter Specialist -->
+          <div class="floating-card floating-card-1">
+            <div class="card-icon">⚡</div>
+            <div class="card-info">
+              <h4>Flutter & Dart</h4>
+              <p>Android & iOS Expert</p>
+            </div>
+          </div>
+
+          <!-- Floating Badge 2: CTO @ Qodex Software -->
+          <div class="floating-card floating-card-2">
+            <div class="card-icon">🚀</div>
+            <div class="card-info">
+              <h4>CTO & Co-Founder</h4>
+              <p>Qodex Software</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       ABOUT & EDUCATION SECTION
+       ========================================================================= -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-badge">About Me</div>
+        <h2 class="section-title">Passion for Pixel-Perfect Mobile Apps</h2>
+        <p class="section-subtitle">
+          Bridging creative mobile design with scalable architectures to deliver production-ready software solutions that scale.
+        </p>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-bio-card reveal reveal-delay-1">
+          <h3>Software Engineer & Mobile Architect</h3>
+          <p>
+            I am a Software Engineer currently pursuing my Bachelor's degree at Quaid-e-Awam University of Engineering Science and Technology (QUEST). With over 1 year of hands-on mobile industry experience, I specialize in architecting cross-platform apps using Flutter and Dart.
+          </p>
+          <p>
+            As CTO and Co-Founder at Qodex Software, I lead app engineering from conceptual prototypes to production Google Play & Apple App Store deployments. My focus is writing clean, maintainable code following MVVM and Clean Architecture patterns, with robust state management and seamless backend integration.
+          </p>
+
+          <div class="key-highlights-list">
+            <div class="highlight-item">
+              <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+              <span>Clean Architecture & MVVM</span>
+            </div>
+            <div class="highlight-item">
+              <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+              <span>Offline-First (SQLite / Hive)</span>
+            </div>
+            <div class="highlight-item">
+              <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+              <span>Firebase & Supabase Cloud</span>
+            </div>
+            <div class="highlight-item">
+              <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+              <span>5-Star Client Rating</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-bio-card reveal reveal-delay-2">
+          <h3>Education & Certifications</h3>
+          
+          <div style="margin-bottom: 24px;">
+            <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 6px;">
+              <h4 style="font-size: 1.15rem; color: #fff;">Bachelor of Engineering in Software Engineering</h4>
+              <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--accent-cyan);">2023 - 2027</span>
+            </div>
+            <p style="color: var(--accent-cyan); font-weight: 600; margin-bottom: 6px;">Quaid-e-Awam University of Engineering Science & Technology (QUEST)</p>
+            <p style="font-size: 0.9rem;">Core focus on Data Structures, Algorithms, Mobile Computing, Software Architecture, and Database Systems.</p>
+          </div>
+
+          <h4 style="font-size: 1.1rem; color: #fff; margin-bottom: 14px; border-top: 1px solid var(--border-subtle); padding-top: 20px;">
+            Professional Certifications
+          </h4>
+          <div style="display: flex; flex-direction: column; gap: 10px;">
+            <div style="display: flex; align-items: center; gap: 10px; font-size: 0.9rem; color: var(--text-secondary);">
+              <span style="color: var(--accent-cyan); font-weight: 700;">★</span>
+              <span>Flutter Bootcamp Certification – Flutter Sukkur Community</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 10px; font-size: 0.9rem; color: var(--text-secondary);">
+              <span style="color: var(--accent-cyan); font-weight: 700;">★</span>
+              <span>2-Month Mobile Engineering Fellowship – Marfah Technologies</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 10px; font-size: 0.9rem; color: var(--text-secondary);">
+              <span style="color: var(--accent-cyan); font-weight: 700;">★</span>
+              <span>Mobile App Engineering Fellowship – Teyzix Core</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 10px; font-size: 0.9rem; color: var(--text-secondary);">
+              <span style="color: var(--accent-cyan); font-weight: 700;">★</span>
+              <span>Mobile App Engineering Fellowship – Qwetrum Technologies</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       EXPERIENCE & LEADERSHIP TIMELINE
+       ========================================================================= -->
+  <section class="section" id="experience">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-badge">Career Journey</div>
+        <h2 class="section-title">Professional Experience</h2>
+        <p class="section-subtitle">
+          Proven track record of engineering cross-platform solutions across dynamic startups and software agencies.
+        </p>
+      </div>
+
+      <div class="timeline-container">
+        <!-- Qodex Software -->
+        <div class="timeline-card featured-role reveal">
+          <div class="timeline-header">
+            <div>
+              <span class="role-title">CTO & Co-Founder</span>
+              <span style="margin: 0 8px; color: var(--text-muted);">|</span>
+              <span class="company-name">Qodex Software</span>
+            </div>
+            <span class="role-period">September 2025 – Present</span>
+          </div>
+          <p class="role-desc">
+            Directing mobile product architecture and engineering cross-platform Flutter applications for enterprise clients. Integrating Firebase, Supabase, and scalable Node.js microservices for authentication, real-time databases, and cloud storage while enforcing Clean Architecture standards.
+          </p>
+        </div>
+
+        <!-- Teyzix Core -->
+        <div class="timeline-card reveal reveal-delay-1">
+          <div class="timeline-header">
+            <div>
+              <span class="role-title">Mobile App Developer</span>
+              <span style="margin: 0 8px; color: var(--text-muted);">|</span>
+              <span class="company-name">Teyzix Core</span>
+            </div>
+            <span class="role-period">June 2026 – July 2026</span>
+          </div>
+          <p class="role-desc">
+            Contributed to mobile app development using Flutter, focusing on core feature implementation, RESTful API data flows, UI refinement, and cross-device testing across multiple Android and iOS form factors.
+          </p>
+        </div>
+
+        <!-- Qwetrum Technologies -->
+        <div class="timeline-card reveal reveal-delay-2">
+          <div class="timeline-header">
+            <div>
+              <span class="role-title">Mobile App Developer</span>
+              <span style="margin: 0 8px; color: var(--text-muted);">|</span>
+              <span class="company-name">Qwetrum Technologies</span>
+            </div>
+            <span class="role-period">June 2026</span>
+          </div>
+          <p class="role-desc">
+            Developed and tested Flutter-based mobile application modules in fast-paced sprint cycles. Assisted in integrating RESTful APIs and Firebase authentication, debugging frontend bottlenecks to boost app responsiveness.
+          </p>
+        </div>
+
+        <!-- Marfah Technologies -->
+        <div class="timeline-card reveal reveal-delay-3">
+          <div class="timeline-header">
+            <div>
+              <span class="role-title">Flutter Developer</span>
+              <span style="margin: 0 8px; color: var(--text-muted);">|</span>
+              <span class="company-name">Marfah Technologies</span>
+            </div>
+            <span class="role-period">July 2025 – August 2025</span>
+          </div>
+          <p class="role-desc">
+            Collaborated in cross-functional Agile teams with designers and backend engineers. Implemented responsive Flutter widgets from Figma designs, integrated authentication services, and maintained technical documentation.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SKILLS & TECH MATRIX
+       ========================================================================= -->
+  <section class="section" id="skills">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-badge">Capabilities</div>
+        <h2 class="section-title">Technical Skills & Arsenal</h2>
+        <p class="section-subtitle">
+          Specialized toolkit honed for building robust, secure, and production-grade mobile applications.
+        </p>
+      </div>
+
+      <div class="skills-container">
+        <!-- Flutter & Languages -->
+        <div class="skill-category-card reveal">
+          <div class="category-header">
+            <div class="category-icon">📱</div>
+            <div>
+              <h3>Mobile & Languages</h3>
+              <p style="font-size: 0.8rem; color: var(--text-muted);">Core Stack</p>
+            </div>
+          </div>
+          <div class="skills-pills">
+            <div class="skill-pill"><span class="dot"></span>Flutter SDK</div>
+            <div class="skill-pill"><span class="dot"></span>Dart</div>
+            <div class="skill-pill"><span class="dot"></span>Android (Java/Kotlin)</div>
+            <div class="skill-pill"><span class="dot"></span>iOS (Swift UI)</div>
+            <div class="skill-pill"><span class="dot"></span>JavaScript / Node.js</div>
+          </div>
+        </div>
+
+        <!-- State Management -->
+        <div class="skill-category-card reveal reveal-delay-1">
+          <div class="category-header">
+            <div class="category-icon">⚙️</div>
+            <div>
+              <h3>State Management</h3>
+              <p style="font-size: 0.8rem; color: var(--text-muted);">Predictable Logic</p>
+            </div>
+          </div>
+          <div class="skills-pills">
+            <div class="skill-pill"><span class="dot"></span>Provider</div>
+            <div class="skill-pill"><span class="dot"></span>BLoC Pattern</div>
+            <div class="skill-pill"><span class="dot"></span>Clean Architecture</div>
+            <div class="skill-pill"><span class="dot"></span>MVVM Pattern</div>
+            <div class="skill-pill"><span class="dot"></span>ChangeNotifier</div>
+          </div>
+        </div>
+
+        <!-- Cloud & Backend -->
+        <div class="skill-category-card reveal reveal-delay-2">
+          <div class="category-header">
+            <div class="category-icon">☁️</div>
+            <div>
+              <h3>Backend & Cloud</h3>
+              <p style="font-size: 0.8rem; color: var(--text-muted);">Scalable APIs</p>
+            </div>
+          </div>
+          <div class="skills-pills">
+            <div class="skill-pill"><span class="dot"></span>Firebase Firestore</div>
+            <div class="skill-pill"><span class="dot"></span>Firebase Auth</div>
+            <div class="skill-pill"><span class="dot"></span>Push Notifications (FCM)</div>
+            <div class="skill-pill"><span class="dot"></span>Supabase & PostgreSQL</div>
+            <div class="skill-pill"><span class="dot"></span>Appwrite Cloud</div>
+            <div class="skill-pill"><span class="dot"></span>RESTful APIs</div>
+          </div>
+        </div>
+
+        <!-- Storage & Tooling -->
+        <div class="skill-category-card reveal reveal-delay-3">
+          <div class="category-header">
+            <div class="category-icon">🛠️</div>
+            <div>
+              <h3>Local DB & Tooling</h3>
+              <p style="font-size: 0.8rem; color: var(--text-muted);">Offline & DevOps</p>
+            </div>
+          </div>
+          <div class="skills-pills">
+            <div class="skill-pill"><span class="dot"></span>SQLite</div>
+            <div class="skill-pill"><span class="dot"></span>Hive Local DB</div>
+            <div class="skill-pill"><span class="dot"></span>Shared Preferences</div>
+            <div class="skill-pill"><span class="dot"></span>Git & GitHub</div>
+            <div class="skill-pill"><span class="dot"></span>Figma to Flutter</div>
+            <div class="skill-pill"><span class="dot"></span>Postman</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       PROJECTS SHOWCASE
+       ========================================================================= -->
+  <section class="section" id="projects">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-badge">Showcase</div>
+        <h2 class="section-title">Featured Production Projects</h2>
+        <p class="section-subtitle">
+          Real-world applications engineered with Flutter, state management, and cloud backends.
+        </p>
+      </div>
+
+      <!-- Filter Controls -->
+      <div class="projects-filter-bar reveal">
+        <button class="filter-btn active" data-filter="all">All Projects</button>
+        <button class="filter-btn" data-filter="mobile">Mobile Apps</button>
+        <button class="filter-btn" data-filter="enterprise">Enterprise Systems</button>
+      </div>
+
+      <!-- Dynamic Project Grid -->
+      <div class="projects-grid" id="projects-grid">
+        <!-- Rendered dynamically by js/projects.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       CLIENT REVIEWS & TESTIMONIALS
+       ========================================================================= -->
+  <section class="section" id="reviews">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-badge">Social Proof</div>
+        <h2 class="section-title">Client Feedback & Reviews</h2>
+        <p class="section-subtitle">
+          Real feedback from international clients and project stakeholders.
+        </p>
+      </div>
+
+      <div class="reviews-grid">
+        <!-- Review 1 -->
+        <div class="review-card reveal">
+          <div class="review-header">
+            <div class="stars-rating">★★★★★</div>
+            <div class="fiverr-badge-tag">
+              <span>●</span> Verified Client Project
+            </div>
+          </div>
+          <p class="review-quote">
+            "Muhammad Khalil did an exceptional job building our subscription-gated music streaming mobile app. The background audio playback and mini-player work seamlessly. Delivered on time and exceeded expectations!"
+          </p>
+          <div class="review-author-info">
+            <div class="author-avatar">A</div>
+            <div class="author-meta">
+              <h4>Amit S.</h4>
+              <p><span>🇮🇳</span> Audio App Client • International Client</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="review-card reveal reveal-delay-1">
+          <div class="review-header">
+            <div class="stars-rating">★★★★★</div>
+            <div class="fiverr-badge-tag">
+              <span>●</span> On-Site Deployment
+            </div>
+          </div>
+          <p class="review-quote">
+            "The hospital management software engineered by Khalil for Indus Medicare Center has transformed our daily clinic workflow. Patient registration, doctor OPD queue, and direct thermal printing are rock solid."
+          </p>
+          <div class="review-author-info">
+            <div class="author-avatar" style="background: linear-gradient(135deg, #10b981, #02d7f2);">D</div>
+            <div class="author-meta">
+              <h4>Medical Administrator</h4>
+              <p><span>🏥</span> Indus Medicare Center, Kandhkot</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="review-card reveal reveal-delay-2">
+          <div class="review-header">
+            <div class="stars-rating">★★★★★</div>
+            <div class="fiverr-badge-tag">
+              <span>●</span> Verified Dealership Client
+            </div>
+          </div>
+          <p class="review-quote">
+            "AutoBike is exactly what our motorbike showroom needed. Managing our inventory and tracking customer sales leads in real time has saved our staff hours every single day. Brilliant Flutter developer!"
+          </p>
+          <div class="review-author-info">
+            <div class="author-avatar" style="background: linear-gradient(135deg, #f59e0b, #ec4899);">R</div>
+            <div class="author-meta">
+              <h4>Showroom Director</h4>
+              <p><span>🏍️</span> AutoBike Showrooms</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       CONTACT SECTION
+       ========================================================================= -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-badge">Get In Touch</div>
+        <h2 class="section-title">Let's Build Your Next Mobile App</h2>
+        <p class="section-subtitle">
+          Have an app idea or looking for a dedicated Flutter developer? Reach out directly and let's bring your project to life.
+        </p>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Contact Info Cards -->
+        <div class="contact-info-cards reveal">
+          <!-- Email Card -->
+          <div class="contact-card-item">
+            <div class="contact-card-icon">✉️</div>
+            <div class="contact-card-text" style="flex-grow: 1;">
+              <h4>Email Address</h4>
+              <p>mkmalik0003@gmail.com</p>
+            </div>
+            <button class="btn btn-sm btn-outline" id="copy-email-btn" data-email="mkmalik0003@gmail.com">
+              Copy
+            </button>
+          </div>
+
+          <!-- Phone / WhatsApp Card -->
+          <a href="https://wa.me/923273440498" target="_blank" rel="noopener noreferrer" class="contact-card-item">
+            <div class="contact-card-icon" style="color: #25d366;">💬</div>
+            <div class="contact-card-text">
+              <h4>Phone & WhatsApp</h4>
+              <p>+92-327-3440498</p>
+            </div>
+          </a>
+
+          <!-- GitHub Card -->
+          <a href="https://github.com/Muhammad-Khalil-00" target="_blank" rel="noopener noreferrer" class="contact-card-item">
+            <div class="contact-card-icon">🐙</div>
+            <div class="contact-card-text">
+              <h4>GitHub Repository</h4>
+              <p>github.com/Muhammad-Khalil-00</p>
+            </div>
+          </a>
+
+          <!-- LinkedIn Card -->
+          <a href="https://linkedin.com/in/muhammad-khalil" target="_blank" rel="noopener noreferrer" class="contact-card-item">
+            <div class="contact-card-icon" style="color: #0077b5;">💼</div>
+            <div class="contact-card-text">
+              <h4>LinkedIn Profile</h4>
+              <p>linkedin.com/in/muhammad-khalil</p>
+            </div>
+          </a>
+        </div>
+
+        <!-- Contact Form Wrapper -->
+        <div class="contact-form-wrapper reveal reveal-delay-1">
+          <form id="contact-form" onsubmit="return false;">
+            <input type="hidden" name="access_key" value="311ac1d1-3504-43f2-bd3f-b4ae05725f0f" />
+
+            <div class="form-group form-animated-group">
+              <label for="contact-name" class="form-label">Your Name *</label>
+              <div class="input-glow-wrapper">
+                <input type="text" id="contact-name" name="name" class="form-input animated-input" placeholder="e.g. John Doe" required />
+                <span class="input-focus-border"></span>
+              </div>
+            </div>
+
+            <div class="form-group form-animated-group">
+              <label for="contact-email" class="form-label">Email Address *</label>
+              <div class="input-glow-wrapper">
+                <input type="email" id="contact-email" name="email" class="form-input animated-input" placeholder="e.g. john@example.com" required />
+                <span class="input-focus-border"></span>
+              </div>
+            </div>
+
+            <div class="form-group form-animated-group">
+              <label for="contact-service" class="form-label">Service Required</label>
+              <div class="input-glow-wrapper">
+                <select id="contact-service" name="service" class="form-select animated-input">
+                  <option value="flutter-mobile-app">New Flutter Mobile App (Android & iOS)</option>
+                  <option value="mvp-development">MVP Prototype Development</option>
+                  <option value="desktop-pos-system">Desktop Management / POS System</option>
+                  <option value="bug-fixes-redesign">Flutter Refactoring, Bug Fixing & Redesign</option>
+                  <option value="custom-consultation">Custom Consultation / Other Inquiry</option>
+                </select>
+                <span class="input-focus-border"></span>
+              </div>
+            </div>
+
+            <div class="form-group form-animated-group">
+              <label for="contact-message" class="form-label">Project Details / Message *</label>
+              <div class="input-glow-wrapper">
+                <textarea id="contact-message" name="message" class="form-textarea animated-input" placeholder="Tell me about your app goals, desired features, or deadlines..." rows="4" required></textarea>
+                <span class="input-focus-border"></span>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-lg form-submit-animated-btn" id="contact-submit-btn" style="width: 100%;">
+              <span class="btn-text">Send Message</span>
+              <span class="btn-icon">
+                <svg viewBox="0 0 20 20" fill="currentColor" width="18" height="18">
+                  <path d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z"/>
+                </svg>
+              </span>
+            </button>
+
+            <!-- Animated Status Alert -->
+            <div class="form-status-alert" id="form-status-alert" style="display: none;"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       PROJECT DETAILS MODAL
+       ========================================================================= -->
+  <div class="modal-backdrop" id="project-modal" role="dialog" aria-modal="true">
+    <div class="modal-content">
+      <button class="modal-close-btn" onclick="closeProjectModal()" aria-label="Close modal">✕</button>
+      <div id="modal-media-wrapper"></div>
+      <div class="modal-inner-body">
+        <div class="modal-header-info">
+          <div>
+            <span class="section-badge" id="modal-project-category">Category</span>
+            <h3 class="modal-title" id="modal-project-title">Title</h3>
+          </div>
+          <div style="text-align: right;">
+            <p style="font-size: 0.8rem; color: var(--text-muted); font-family: var(--font-mono);" id="modal-project-timeline">Timeline</p>
+            <p style="font-size: 0.85rem; color: var(--accent-cyan); font-weight: 600;" id="modal-project-client">Client</p>
+          </div>
+        </div>
+
+        <div class="modal-section">
+          <h4>Project Overview</h4>
+          <p id="modal-project-desc" style="line-height: 1.7; font-size: 0.95rem;"></p>
+        </div>
+
+        <div class="modal-section">
+          <h4>Core Features & Engineering</h4>
+          <ul class="modal-features-list" id="modal-project-features">
+            <!-- Populated dynamically -->
+          </ul>
+        </div>
+
+        <div class="modal-section">
+          <h4>Technologies Used</h4>
+          <div class="project-tech-tags" id="modal-project-tags">
+            <!-- Populated dynamically -->
+          </div>
+        </div>
+
+        <div style="display: flex; gap: 14px; margin-top: 28px; padding-top: 20px; border-top: 1px solid var(--border-subtle);">
+          <a href="#contact" onclick="closeProjectModal()" class="btn btn-primary">
+            <span>Hire for Similar Project</span>
+          </a>
+          <button class="btn btn-outline" onclick="closeProjectModal()">
+            <span>Close Case Study</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       MESSAGE SENT SUCCESS POPUP MODAL
+       ========================================================================= -->
+  <div class="popup-modal-backdrop" id="success-popup-modal" role="dialog" aria-modal="true">
+    <div class="popup-modal-card">
+      <button class="popup-close-x" onclick="closeSuccessPopup()" aria-label="Close popup">✕</button>
+      
+      <div class="popup-icon-wrap">
+        <svg class="popup-check-svg" viewBox="0 0 52 52">
+          <circle class="popup-check-circle" cx="26" cy="26" r="23" fill="none"/>
+          <path class="popup-check-path" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+        </svg>
+      </div>
+
+      <h3 class="popup-modal-title">Message Sent Successfully!</h3>
+      <p class="popup-modal-message">
+        Thank you <strong id="popup-client-name">there</strong>! Your message has been sent to Muhammad Khalil.
+      </p>
+
+      <div class="popup-highlight-badge">
+        <span class="popup-pulse-dot"></span>
+        <span>I will contact you very soon!</span>
+      </div>
+
+      <div class="popup-meta-box">
+        <div class="popup-meta-row">
+          <span class="popup-meta-label">Forwarded To:</span>
+          <span class="popup-meta-val">mkmalik0003@gmail.com</span>
+        </div>
+        <div class="popup-meta-row">
+          <span class="popup-meta-label">Direct WhatsApp:</span>
+          <span class="popup-meta-val">+92-327-3440498</span>
+        </div>
+      </div>
+
+      <button class="btn btn-primary popup-action-btn" onclick="closeSuccessPopup()">
+        <span>Got it, Thank you!</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       FOOTER
+       ========================================================================= -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div>
+          <div class="brand-logo" style="margin-bottom: 10px;">
+            <div class="logo-badge">MK</div>
+            <div class="logo-text">Muhammad <span>Khalil</span></div>
+          </div>
+          <p style="font-size: 0.9rem; max-width: 420px;">
+            Engineering clean, scalable, cross-platform Flutter mobile applications for visionary businesses & startups worldwide.
+          </p>
+        </div>
+
+        <div class="footer-socials">
+          <a href="https://github.com/Muhammad-Khalil-00" target="_blank" rel="noopener noreferrer" class="social-circle-btn" aria-label="GitHub">
+            🐙
+          </a>
+          <a href="https://linkedin.com/in/muhammad-khalil" target="_blank" rel="noopener noreferrer" class="social-circle-btn" aria-label="LinkedIn">
+            💼
+          </a>
+          <a href="https://wa.me/923273440498" target="_blank" rel="noopener noreferrer" class="social-circle-btn" aria-label="WhatsApp">
+            💬
+          </a>
+          <a href="mailto:mkmalik0003@gmail.com" class="social-circle-btn" aria-label="Email">
+            ✉️
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Muhammad Khalil. All Rights Reserved.</p>
+        <p>Built with Passion, Clean Architecture & Modern Web Animations.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/projects.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
